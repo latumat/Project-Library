@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+    height: 1000px;
+    width: 1000px;
+}
+
+.book {
+    border-radius: 25px;
+    border: solid 1px blue;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    color: red;
+    margin: 10px;
+}
+
+.read {
+    background-color: green;
+    content: "HELLO"
+}
