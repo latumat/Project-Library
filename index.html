@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
-        <ul>
-            <label for="name">Book Name:</label>
-            <input type="text" id="name"/>
-            <label for="author">Author:</label>
-            <input type="text" id="author"/>
-            <label for="pages">Amount of Pages:</label>
-            <input type="text" id="pages"/>
-        </ul>
-    </form>
-    <button class="add-book">Add Book</button>
-    <div class="container"></div>
+    <div id="page">
+        <div id="header">library</div>
+        <div id="form">
+            <form>
+                <ul>
+                    <label for="name">Book Name:</label>
+                    <input type="text" id="name"/>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author"/>
+                    <label for="pages">Pages:</label>
+                    <input type="text" id="pages"/>
+                </ul>
+            </form>
+        </div>
+        <div id="add">
+            <button class="add-book">+ Add Book</button>
+        </div>
+        <div class="container"></div>
+        <div class="footer">
+            <p class="copyright"> Copyright © 2022 Thomas Huy Nguyen </p>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

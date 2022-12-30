@@ -1,8 +1,8 @@
 const library = document.querySelector(".container");
 const add = document.querySelector(".add-book");
-const naruto = new Book("Naruto", "Alex Phan", "150", true);
-const bleach = new Book("Bleach", "Youssef Marzouk", "200");
-const onePiece = new Book("One Piece", "Juan Carlos", "500");
+const naruto = new Book("Naruto", "Masashi Kishimoto", "150", true);
+const bleach = new Book("Bleach", "Tite Kubo", "200");
+const onePiece = new Book("One Piece", "Eiichirō Oda", "500");
 const myLibrary = [naruto, bleach, onePiece];
 let removes = document.querySelectorAll(".remove");
 let rStatus = document.querySelectorAll(".read-status");
@@ -33,8 +33,8 @@ function display() {
     const remove = document.createElement("button");
     const readStatus = document.createElement("button");
     pName.innerHTML = book.title;
-    pAuthor.innerHTML = book.author;
-    pPages.innerHTML = book.pages;
+    pAuthor.innerHTML = `Author: ${book.author}`;
+    pPages.innerHTML = `Pages: ${book.pages}`;
     remove.innerHTML = "Remove";
     if (book.read) {
       readStatus.innerHTML = "Read";
@@ -43,6 +43,7 @@ function display() {
       readStatus.innerHTML = "Not read";
     }
     remove.classList = "remove";
+    pName.classList = "title";
     readStatus.setAttribute("id", `${i}rs`);
     readStatus.classList.add("read-status");
     div.appendChild(pName);
@@ -79,7 +80,6 @@ function removeBook() {
   removes.forEach((e) => {
     e.addEventListener("click", () => {
       const bookIndex = e.getAttribute("id");
-      console.log(bookIndex);
       myLibrary.splice(bookIndex, 1);
       display();
     });
@@ -99,7 +99,6 @@ function changeStatus() {
         e.classList.add("read");
         e.innerHTML = "Read";
       }
-      console.log(myLibrary[readIndex].read);
     });
   });
 }

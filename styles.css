@@ -1,22 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E7EB;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+}
+
+/** Header **/
+
+#header {
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    padding: 30px 0 0 0;
+    background-color: #e63946;
+    height: 90px;
+}
+
+/** Add book **/
+
+#form {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #172937;
+    background-color: white;
+    
+}
+
+#add {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 0 0 20px 0;
+}
+
+.add-book {
+    background-color: #90e0ef;
+    border-radius: 25px;
+    width: 250px;
+    height: 65px;
+    font-size: 25px;
+    font-weight: 750;
+    border: white;
+    color: #172937;
+}
+
+.add-book:hover {background-color: #48cae4;}
+
+button {
+    cursor: pointer;
+}
+
+/** Container **/
+
 .container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    border: solid 1px black;
-    height: 1000px;
-    width: 1000px;
+    margin: 40px 0 300px 0;
 }
+
+/** Book **/
 
 .book {
     border-radius: 25px;
-    border: solid 1px blue;
-    height: 300px;
-    width: 200px;
+    height: 250px;
+    width: 350px;
+    background-color: white;
     text-align: center;
-    color: red;
+    color: #e63946;
     margin: 10px;
+    box-shadow: 5px 10px;
 }
 
-.read {
-    background-color: green;
-    content: "HELLO"
+.title {
+    font-size: 40px;
+    font-weight: 800;
 }
+.remove, .read-status {
+    border-radius: 20px;
+    border: white;
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.remove:hover {background-color: #adb5bd;}
+
+.read-status {
+    background-color: #f7a399;
+}
+
+.read-status:hover { background-color: #f38375;}
+
+.read {
+    background-color: #6ede8a;
+}
+
+.read:hover {background-color: #4ad66d;}
+
+/** FOOTER **/
+
+.footer {
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+  }
